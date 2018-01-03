@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="84dp"
+        android:layout_marginBottom="2dp"
+        android:background="@color/colorPrimary"
+        app:layout_constraintBottom_toTopOf="@+id/recyclerView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/referrals"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/ic_medal"
+            app:layout_constraintEnd_toStartOf="@+id/txtRunner"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/txtRunner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="145dp"
+            android:layout_marginTop="7dp"
+            android:text="Runner"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/refer"
+            app:layout_constraintStart_toEndOf="@+id/referrals"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="38dp"
+            android:layout_marginTop="3dp"
+            android:text="Complete 1 task for next level"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toStartOf="@+id/refer"
+            app:layout_constraintTop_toBottomOf="@+id/txtRunner" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="148dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:paddingTop="5dp"
+            app:layout_constraintStart_toStartOf="@+id/task"
+            app:layout_constraintTop_toBottomOf="@+id/task" />
+
+
+        <Button
+            android:id="@+id/refer"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_marginBottom="2dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/round_corner"
+            android:text="@string/refer"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/task"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/txtRunner"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+    </android.support.constraint.ConstraintLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+</android.support.constraint.ConstraintLayout>
