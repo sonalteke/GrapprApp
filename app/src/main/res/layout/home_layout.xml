@@ -38,7 +38,7 @@
             android:text="Runner"
             android:textColor="#FFFFFF"
             android:textSize="20sp"
-            app:layout_constraintEnd_toStartOf="@+id/refer"
+            app:layout_constraintEnd_toStartOf="@+id/btnReferral"
             app:layout_constraintStart_toEndOf="@+id/referrals"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -50,7 +50,7 @@
             android:layout_marginTop="3dp"
             android:text="Complete 1 task for next level"
             android:textColor="@android:color/white"
-            app:layout_constraintEnd_toStartOf="@+id/refer"
+            app:layout_constraintEnd_toStartOf="@+id/btnReferral"
             app:layout_constraintTop_toBottomOf="@+id/txtRunner" />
 
         <ProgressBar
@@ -65,7 +65,7 @@
 
 
         <Button
-            android:id="@+id/refer"
+            android:id="@+id/btnReferral"
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_marginBottom="2dp"
@@ -89,6 +89,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout"
+        />
 
 </android.support.constraint.ConstraintLayout>

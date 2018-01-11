@@ -2,9 +2,7 @@ package com.codekul.grapprapplication.fragments
 
 import android.os.Bundle
 import android.support.v4.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import com.codekul.grapprapplication.R
 
 /**
@@ -20,4 +18,6 @@ class NotiFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         activity.setTitle("Notifications")
     }
+
+
 }

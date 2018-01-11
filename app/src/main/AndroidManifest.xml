@@ -25,7 +25,8 @@
             android:name=".TabbedAppActivity"
             android:label="@string/title_activity_tabbed_app"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".SliderActivity"></activity>
+        <activity android:name=".SliderActivity" />
+        <activity android:name=".AppListActivity"></activity>
     </application>
 
 </manifest>

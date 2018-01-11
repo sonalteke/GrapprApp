@@ -1,7 +1,6 @@
 package com.codekul.grapprapplication.rest
 
-import com.codekul.grapprapplication.domain.Apps
-import com.codekul.grapprapplication.dto.App
+import com.codekul.grapprapplication.domain.AppsInfo
 import retrofit2.Call
 import retrofit2.Retrofit
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory
@@ -17,14 +16,14 @@ interface ApiService {
     @Headers("Accept: application/json","Content-Type: application/json")
 
     @GET("getApps")
-    fun getApps():Call<List<Apps>>
+    fun getApps():Call<AppsInfo>
 
     companion object {
 
         private val PROTOCOL: String = "http"
-        private val SERVER: String = "192.168.0.116"
-        private val PORT: String = "8080"
-        private val APP_NAME: String = "apps"
+        private val SERVER: String = "192.168.0.108"
+        private val PORT: String = "8181"
+        private val APP_NAME: String = "grappr/apps"
         val BASE_URL = "$PROTOCOL://$SERVER:$PORT/$APP_NAME/"
 
         fun create(): ApiService {
