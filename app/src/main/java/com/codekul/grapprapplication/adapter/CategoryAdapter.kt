@@ -1,17 +1,22 @@
 package com.codekul.grapprapplication.adapter
 
+import android.support.v4.app.Fragment
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import android.widget.Toast
 import com.codekul.grapprapplication.R
 import com.codekul.grapprapplication.domain.Category
+import com.codekul.grapprapplication.fragments.AppsFragment
 
 /**
  * Created by sonal on 5/1/18.
  */
 class CategoryAdapter(val list: ArrayList<Category>, val listener : (Int) -> Unit) : RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
+
+    var fragment: Fragment? = null
 
     override fun onBindViewHolder(holder: ViewHolder?, position: Int) {
         holder?.bindItems(list[position], position, listener)
@@ -29,6 +34,7 @@ class CategoryAdapter(val list: ArrayList<Category>, val listener : (Int) -> Uni
     }
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
+        var fragment: Fragment? = null
 
         val view = view
         fun bindItems(data: Category, pos: Int, listener: (Int) -> Unit) = with(itemView) {
@@ -38,6 +44,7 @@ class CategoryAdapter(val list: ArrayList<Category>, val listener : (Int) -> Uni
             textView1.text = data.name
 
             itemView.setOnClickListener {
+
                 listener(pos)
             }
         }

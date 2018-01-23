@@ -6,6 +6,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.codekul.grapprapplication.AppListActivity">
+    tools:context="com.codekul.grapprapplication.activity.AppListActivity">
 
 </android.support.v4.view.ViewPager>

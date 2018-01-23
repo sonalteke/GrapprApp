@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Grappr</string>
+    <string name="app_name">CashBolo</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -15,4 +15,10 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="forgetPassword"><u>Forget Password</u></string>
+    <string name="signup"><u>Sign Up For CashBolo</u></string>
+    <string name="wallet">you need to have minimum balance of rupees 10 in your wallet to recharge.</string>
+    <string name="point">Earn 10Rs by redeeming 100 points</string>
+    <string name="points">Points</string>
+    <string name="earn">Earn per install &amp; play :</string>
 </resources>

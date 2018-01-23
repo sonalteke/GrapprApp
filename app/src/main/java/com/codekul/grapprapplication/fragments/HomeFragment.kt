@@ -4,10 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v7.widget.LinearLayoutManager
-import android.util.Log
 import android.view.*
 import android.widget.LinearLayout
-import com.codekul.grapprapplication.AppListActivity
+import com.codekul.grapprapplication.activity.AppListActivity
 import com.codekul.grapprapplication.R
 import com.codekul.grapprapplication.adapter.CategoryAdapter
 import com.codekul.grapprapplication.domain.Category
@@ -23,26 +22,30 @@ class HomeFragment : Fragment() {
     var fragment: Fragment? = null
 
     override fun onCreateView(inflater: LayoutInflater?, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+
         return inflater?.inflate(R.layout.home_layout,container,false)
     }
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        activity.setTitle("Category")
+
+        activity.title = "CashBolo"
         category()
     }
 
-    fun category(){
+    private fun category(){
 
         recyclerView.layoutManager = LinearLayoutManager(context,LinearLayout.VERTICAL,false)
 
         val items = ArrayList<Category>()
-        items.add(Category("Apps"))
-//        items.add(Category("Videos"))
-//        items.add(Category("WhatsApp Group"))
+        items.add(Category("Install Apps"))
+        items.add(Category("Watch Videos"))
+        items.add(Category("Write Reviews"))
+        items.add(Category("Complete Surveys"))
+        items.add(Category("Join Whatsapp Groups"))
 
         val adapter = CategoryAdapter(items){
-            val intent = Intent(context,AppListActivity::class.java)
+            val intent = Intent(context, AppListActivity::class.java)
             startActivity(intent)
         }
         recyclerView.adapter  =  adapter

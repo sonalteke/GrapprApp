@@ -8,7 +8,7 @@ android {
     compileSdkVersion 26
     defaultConfig {
         applicationId "com.codekul.grapprapplication"
-        minSdkVersion 20
+        minSdkVersion 21
         targetSdkVersion 26
         versionCode 1
         versionName "1.0"
@@ -40,5 +40,8 @@ dependencies {
     compile "com.squareup.retrofit2:retrofit:2.3.0"
     compile "com.squareup.retrofit2:adapter-rxjava2:2.3.0"
     compile "com.squareup.retrofit2:converter-gson:2.3.0"
+
+    //picasso
+    compile 'com.squareup.picasso:picasso:2.5.2'
 
 }

@@ -18,6 +18,6 @@ class AboutusFragment : Fragment() {
 
     override fun onViewCreated(view: View?, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        activity.setTitle("About Us")
+        activity.title = "About us"
     }
 }
